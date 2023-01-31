@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import { Row, Col, Image, Tab } from "react-bootstrap";
 import Home from './components/Home'
+import AboutUs from "./components/AboutUs";
+import MenuButton from "../../global/MenuButton/MenuButton";
+import Services from "./components/Services";
+import OurStaff from "./components/OurStaff";
 
 const LandingPage = () => {
     const [ tab, setTab ] = useState('Home')
     return (
-      <div className="position-relative w-100" style={{ height: '100vh'}}>
+      <div className="position-relative w-100" style={{ height: '100%'}}>
         <Image src="/images/bg.jpg" className="position-absolute w-100 h-100" style={{ objectFit: 'cover', zIndex: '-1' }} />
         <Row className="w-100">
           <Col xs={3} />
@@ -23,33 +27,32 @@ const LandingPage = () => {
             </div>
             <div className="d-flex flex-row w-100">
               <Col xs={3} className="fs-5 bg-secondary text-primary border-start border-end border-primary p-0">
-                <div className="d-flex align-items-center border-bottom border-primary-hover grad-vertical ps-24 py-8">
-                  <p className="mb-0">Home</p>
-                </div>
-                <div className="d-flex align-items-center border-bottom border-primary-hover grad-vertical ps-24 py-8">
-                  <p className="mb-0">About Us</p>
-                </div>
-                <div className="d-flex align-items-center border-bottom border-primary-hover grad-vertical ps-24 py-8">
-                  <p className="mb-0">Services</p>
-                </div>
-                <div className="d-flex align-items-center border-bottom border-primary-hover grad-vertical ps-24 py-8">
-                  <p className="mb-0">Our Staff</p>
-                </div>
-                <div className="d-flex align-items-center border-bottom border-primary-hover grad-vertical ps-24 py-8">
-                  <p className="mb-0">Ministries</p>
-                </div>
-                <div className="d-flex align-items-center border-bottom border-primary-hover grad-vertical ps-24 py-8">
-                  <p className="mb-0">Photos</p>
-                </div>
-                <div className="d-flex align-items-center border-bottom border-primary-hover grad-vertical ps-24 py-8">
-                  <p className="mb-0">Sermons</p>
-                </div>
-                <div className="d-flex align-items-center ps-24 grad-vertical py-8">
-                  <p className="mb-0">Contact/Directions</p>
-                </div>
+                <MenuButton setTab={setTab} tab={'Home'} />
+                <MenuButton setTab={setTab} tab={'About Us'} />
+                <MenuButton setTab={setTab} tab={'Services'} />
+                <MenuButton setTab={setTab} tab={'Our Staff'} />
+                <MenuButton setTab={setTab} tab={'Ministries'} />
+                <MenuButton setTab={setTab} tab={'Photos'} />
+                <MenuButton setTab={setTab} tab={'Sermons'} />
+                <MenuButton setTab={setTab} tab={'Contact/Directions'} />
               </Col>
-              <Col xs={9} className="bg-white px-40 py-32">
-                <Home />
+              <Col xs={9} className="bg-white">
+                <Tab.Container activeKey={tab} className="border-0">
+                  <Tab.Content className="w-100">
+                    <Tab.Pane eventKey="Home">
+                      <Home />
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="About Us">
+                      <AboutUs />
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="Services">
+                      <Services />
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="Our Staff">
+                      <OurStaff />
+                    </Tab.Pane>
+                  </Tab.Content>
+                </Tab.Container>
               </Col>
             </div>
           </Col>
