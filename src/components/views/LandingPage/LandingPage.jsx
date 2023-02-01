@@ -5,15 +5,17 @@ import AboutUs from "./components/AboutUs";
 import MenuButton from "../../global/MenuButton/MenuButton";
 import Services from "./components/Services";
 import OurStaff from "./components/OurStaff";
+import Ministries from "./components/Ministries";
+import Photos from "./components/Photos";
 
 const LandingPage = () => {
     const [ tab, setTab ] = useState('Home')
     return (
-      <div className="position-relative w-100" style={{ height: '100%'}}>
-        <Image src="/images/bg.jpg" className="position-absolute w-100 h-100" style={{ objectFit: 'cover', zIndex: '-1' }} />
+      <div className="position-relative w-100">
+        <Image src="/images/bg.jpg" className="position-absolute w-100" style={{ objectFit: 'cover', zIndex: '-1' }} />
         <Row className="w-100">
           <Col xs={3} />
-          <Col xs={6}>
+          <Col xs={6} className="border-bottom border-end border-primary px-0 mb-48">
             <div 
               className="w-100 text-white ratio banner-ratio font-non-serif"
               style={{backgroundImage: "url(/images/sky3.jpeg)", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
@@ -50,6 +52,12 @@ const LandingPage = () => {
                     </Tab.Pane>
                     <Tab.Pane eventKey="Our Staff">
                       <OurStaff />
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="Ministries">
+                      <Ministries />
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="Photos">
+                      <Photos />
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
