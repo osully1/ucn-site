@@ -3,7 +3,7 @@ import { Row, Image } from "react-bootstrap";
 const OurStaff = () => {
   console.log('home')
   return (
-    <div className="text-primary py-32 ps-32 fs-5">
+    <div className="text-primary py-32 ps-md-32 ps-16 fs-5 bg-sm custom-view-height">
       <div>
         <Row className="w-100">
           <p className="mb-0 fs-3 fw-bold">Pastor Kevin</p>

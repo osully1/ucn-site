@@ -3,8 +3,8 @@ import { Row, Col, Image } from "react-bootstrap";
 const Services = () => {
   console.log('home')
   return (
-    <Row className="text-primary pb-32">
-      <Col xs={6} className="pt-32 ps-32 fs-5 lh-sm">
+    <Row className="text-primary pb-32 bg-sm custom-view-height me-0">
+      <Col xs={12} md={6} className="pt-32 ps-32 pe-32 pe-md-16 fs-5 lh-sm">
         <h1>What to Expect...</h1>
         <p className="mb-8">Whether you're just beginning your Christian journey or have been a believer for years we want you to feel comfortable and spiritually nourished here.</p>
         <p>If you're thinking about visiting us let us tell you what our service is like:</p>
@@ -20,7 +20,7 @@ const Services = () => {
         <p className="mb-8">Sunday School is available during the service for children ages 4 and up for a time of learning and activity.</p>
         <p>The church parlor near the back of the sanctuary is also available for children of all ages. There is an audio feed of the service as well as toys and books for the little ones.</p>
       </Col>
-      <Col xs={6} className="ps-0">
+      <Col xs={6} className="d-none d-md-block ps-0 pe-0">
         <Image src="/images/services.jpg" className="w-100" />
         <p className="mt-16">Copyright 2022 United Church of Norwood. All rights reserved.</p>
       </Col>

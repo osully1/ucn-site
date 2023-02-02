@@ -14,16 +14,16 @@ const Photos = () => {
   }
   
   return (
-    <div className="text-primary p-32 fs-5">
+    <div className="text-primary p-32 fs-5 bg-sm custom-view-height">
       <Row>
         {photoAlbum.photos.map((photo) => {
           return (
-          <Col xs={3} className="p-0 m-0">
+          <Col xs={12} md={3} className="p-0 m-0">
             <Button className="w-100 h-100 bg-transparent rounded-0 border-0 px-0">
               <Image 
                 src={`/images/${photo}`}
-                className="mw-100" 
-                style={{objectFit: 'cover', width: '9rem', height: '9rem'}}
+                className="mw-100 photo-sizing" 
+                style={{objectFit: 'cover'}}
                 onClick={() => handleShowModal(photo)}
               />
             </Button>
