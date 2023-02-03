@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Row, Col, Image, Tab, Dropdown, DropdownButton } from "react-bootstrap";
+import { Row, Col, Image, Tab, Dropdown } from "react-bootstrap";
 import Home from './components/Home'
 import AboutUs from "./components/AboutUs";
 import MenuButton from "../../global/MenuButton/MenuButton";
@@ -21,16 +21,20 @@ const LandingPage = () => {
 
   return (
     <div className="position-relative w-100 bg-sm">
-      <Image src="/images/bg.jpg" className="position-absolute d-none d-md-block w-100" style={{ objectFit: 'cover', zIndex: '-1', overflow: 'hidden' }} />
+      <Image 
+        src="/images/bg.jpg"
+        className="position-absolute d-none d-md-block w-100"
+        style={{ objectFit: 'cover', zIndex: '-1', overflow: 'hidden' }}
+      />
       <Row className="w-100 m-0 bg-sm">
-        <Col xs={0} md={3} />
-        <Col xs={12} md={6} className="custom-borders px-0 mb-48">
+        <Col xs={0} md={2} lg={3} />
+        <Col xs={12} md={8} lg={6} className="custom-borders px-0 mb-48">
           <div 
             className="w-100 text-white ratio banner-ratio font-non-serif"
             style={{backgroundImage: "url(/images/sky3.jpeg)", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
             <div className="d-flex flex-column text-center">
-              <p className="display-5 fw-bold pt-md-64 pt-16 mb-0">United Church of Norwood</p>
-              <p className="fs-2 fw-bold">Many Peoples, One Church</p>
+              <p className="custom-hero-styling fw-bold mb-0">United Church of Norwood</p>
+              <p className="custom-subhero-styling fw-bold">Many Peoples, One Church</p>
             </div>
           </div>
           <div className="d-flex justify-content-between align-items-center bg-primary">

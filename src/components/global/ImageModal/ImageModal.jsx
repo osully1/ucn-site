@@ -3,10 +3,8 @@ import { Modal, Image, Button } from 'react-bootstrap'
 const ImageModal = ({ show, setShow, imageFile, setImageFile, album }) => {
   const handleChangeImage = (dir) => {
     const idx = album.indexOf(imageFile)
-    console.log(`IDX: ${idx}`)
     if (dir === '+') {
       if (idx === album.length - 1) {
-        console.log('HELLO')
         setImageFile(album[0])
       } else {
         setImageFile(album[idx + 1])

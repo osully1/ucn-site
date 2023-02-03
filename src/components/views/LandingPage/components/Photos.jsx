@@ -18,7 +18,7 @@ const Photos = () => {
       <Row>
         {photoAlbum.photos.map((photo) => {
           return (
-          <Col xs={12} md={3} className="p-0 m-0">
+          <Col xs={12} md={6} lg={3} className="p-0 m-0" key={photo}>
             <Button className="w-100 h-100 bg-transparent rounded-0 border-0 px-0">
               <Image 
                 src={`/images/${photo}`}
