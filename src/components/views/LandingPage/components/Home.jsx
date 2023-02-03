@@ -8,9 +8,9 @@ const Home = () => {
       {/* <Image src="/images/bg.jpg" className="faded-home-bg" /> */}
       {/* <div className="position-absolute w-100 h-100" style={{backgroundImage: "url(/images/home.jpeg", zIndex: '-1', height: "100vh", top: "0", left: "0"}} /> */}
       <Row className="text-primary text-center pb-32 bg-sm w-100 m-0 custom-view-height">
-        <Col xs={12} lg={6} className="pt-32 px-16 fs-5 bg-transparent">
-          <p className="display-4 fw-bold text-primary">Welcome!</p>
-          <p className="fs-3 lh-sm">The United Church of Norwood</p>
+        <Col xs={12} lg={6} className="pt-32 pt-lg-16 pt-xxl-32 px-16 fs-5 bg-transparent">
+          <p className="d-block d-lg-none d-xxl-block display-4 fw-bold text-primary">Welcome!</p>
+          <p className="custom-title-font lh-sm">The United Church of Norwood</p>
           <p className="fs-5 mb-8">Evangelical Free Church of America</p>
           {/* <p className="mb-0">An affiliate of the Evangelical Free Church of America</p> */}
           <p className="mb-0">You can follow us on Facebook and watch our live-stream service every Sunday morning at 10:00 a.m. by clicking <a href="https://www.facebook.com/unitedchurchofnorwood/" target="about:blank" className="fw-bold">here</a>.</p>

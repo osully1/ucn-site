@@ -253,3 +253,15 @@
     font-size: 1.75rem;
   }
 }
+
+.custom-title-font {
+  font-size: 24px;
+  @media only screen and (min-width: 992px) {
+    font-size: $font-size-base * 2.5;
+    font-weight: bold;
+  }
+  @media only screen and (min-width: 1400px) {
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
