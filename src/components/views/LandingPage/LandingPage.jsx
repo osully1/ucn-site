@@ -13,11 +13,22 @@ import Hamburger from "hamburger-react";
 const LandingPage = () => {
   const [ tab, setTab ] = useState('Home')
   const [ openHamburger, setOpenHamburger ] = useState(false)
+  const [ selected, setSelected ] = useState('Home')
   
   const handleMenuClick = (value) => {
     setOpenHamburger(false)
     setTab(value)
   }
+
+  const menuArray = [
+    'Home',
+    'About Us',
+    'Services',
+    'Our Staff',
+    'Ministries',
+    'Photos',
+    'Contact Us',
+  ]
 
   return (
     <div className="position-relative w-100 bg-sm">
@@ -92,13 +103,11 @@ const LandingPage = () => {
           </div>
           <div className="d-flex flex-row w-100">
             <Col xs={0} md={3} className="d-none d-md-block fs-5 bg-secondary text-primary border-start border-end border-primary p-0">
-              <MenuButton setTab={setTab} tab={'Home'} />
-              <MenuButton setTab={setTab} tab={'About Us'} />
-              <MenuButton setTab={setTab} tab={'Services'} />
-              <MenuButton setTab={setTab} tab={'Our Staff'} />
-              <MenuButton setTab={setTab} tab={'Ministries'} />
-              <MenuButton setTab={setTab} tab={'Photos'} />
-              <MenuButton setTab={setTab} tab={'Contact Us'} />
+              {menuArray.map((item) => {
+                return (
+                  <MenuButton setTab={setTab} tab={item} selected={selected} setSelected={setSelected} />
+                )
+              })}
             </Col>
             <Col xs={12} md={9} className="bg-white">
               <Tab.Container activeKey={tab} className="border-0">
